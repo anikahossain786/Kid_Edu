@@ -1,0 +1,837 @@
+/* General Reset */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+img,
+div,
+span /* Apply Background Image */
+body {
+  background: url("./assets/bg.png") no-repeat center center fixed;
+  background-size: cover; /* Ensures the image covers the entire screen */
+  font-family: Arial, sans-serif; /* Keep your font styling */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 40px;
+  margin-right: 8px;
+}
+
+.navbar .logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+  /* font-weight: bold; */
+  color: #ff9800; /* Default color */
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links li:nth-child(2) a {
+  color: #00c8ff; /* Blue */
+}
+
+.navbar .nav-links li:nth-child(3) a {
+  color: #00ffab; /* Greenish */
+}
+
+.navbar .nav-links li:nth-child(4) a {
+  color: #8a2be2; /* Purple */
+}
+
+.navbar .nav-links li a:hover {
+  opacity: 0.7;
+}
+
+.navbar .contact-btn {
+  padding: 0.7rem 1.5rem;
+  background: #ff9800;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  /* font-weight: bold; */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .contact-btn:hover {
+  background: #e68a00;
+}
+
+/* Banner */
+/* Add a Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+/* Banner Text Styling */
+.banner-content p {
+  margin-top: 1.5rem;
+  color: #555; /* Soft gray for readability */
+  font-family: "Poppins", sans-serif; /* Modern sans-serif font */
+  font-size: 1.2rem; /* Slightly larger for better readability */
+  line-height: 1.8; /* Enhanced line spacing */
+  font-weight: 400; /* Regular weight */
+  text-align: left; /* Adjust alignment if needed */
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  background-color: #ffffff;
+}
+
+.banner-content {
+  max-width: 45%; /* Adjusted width for better alignment */
+}
+
+.banner-content h1 {
+  font-size: 3rem; /* Increased size for prominence */
+  color: #333;
+  line-height: 1.4; /* Improved line spacing */
+}
+
+.banner-content h1 span {
+  font-weight: bold;
+}
+
+.banner-content h1 span:nth-of-type(1) {
+  color: #ff9800; /* Orange for "Empowering" */
+}
+
+.banner-content h1 span:nth-of-type(2) {
+  color: #007bff; /* Blue for "students" */
+}
+
+.banner-content h1 span:nth-of-type(3) {
+  color: #007bff; /* Blue for "towards vision" */
+}
+
+.banner-content p {
+  margin-top: 1.5rem;
+  color: #555;
+  font-size: 1.2rem; /* Increased for better readability */
+  line-height: 1.6;
+}
+
+.banner-content .enroll-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem; /* Adjusted button padding */
+  background: #000000; /* Black background for the button */
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.banner-content .enroll-btn:hover {
+  background: #555; /* Hover effect for the button */
+}
+
+.banner-image {
+  max-width: 50%; /* Proper alignment with content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0; /* Removed rounding */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column-reverse; /* Adjusted to show the image after the content */
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .banner-content {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .banner-image {
+    max-width: 100%; /* Full width for smaller devices */
+    margin-bottom: 1.5rem;
+  }
+
+  .banner-image img {
+    max-width: 80%; /* Reduced image size for better fit */
+  }
+
+  .banner-content h1 {
+    font-size: 2rem; /* Adjusted for mobile readability */
+    line-height: 1.4;
+  }
+
+  .banner-content p {
+    font-size: 1rem; /* Adjusted for mobile readability */
+    line-height: 1.5;
+  }
+
+  .banner-content .enroll-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+/* Curriculum Section */
+.curriculum {
+  text-align: center;
+  padding: 2rem 5%;
+  background-color: #f9fafb; /* Light background */
+}
+
+.curriculum h2 {
+  font-size: 2rem; /* Larger and centered */
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.card.kinder {
+  position: relative;
+  background: #ffffff; /* White background */
+  border-radius: 15px;
+  overflow: hidden; /* Ensure pseudo-elements don't overflow */
+}
+
+.card.kinder:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 200, 255, 0.2),
+    rgba(0, 200, 255, 0)
+  ); /* Blue gradient */
+  z-index: -1; /* Place behind content */
+}
+
+.card.elementary {
+  position: relative;
+  background: #ffffff; /* White background */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card.elementary:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 152, 0, 0.2),
+    rgba(255, 152, 0, 0)
+  ); /* Orange gradient */
+  z-index: -1; /* Place behind content */
+}
+
+.card.middle {
+  position: relative;
+  background: #ffffff; /* White background */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card.middle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(138, 43, 226, 0.2),
+    rgba(138, 43, 226, 0)
+  ); /* Purple gradient */
+  z-index: -1; /* Place behind content */
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Even spacing between cards */
+  flex-wrap: wrap; /* Wrap on smaller devices */
+}
+
+.card {
+  flex: 1;
+  max-width: 300px; /* Uniform width */
+  background: #ffffff;
+  border-radius: 15px; /* Smooth rounded edges */
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Gentle shadow */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Card "Read More" Links */
+.card a {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.card.kinder a {
+  color: #00c8ff; /* Light blue for Kinder card */
+}
+
+.card.kinder a:hover {
+  color: #007bff; /* Darker blue on hover */
+}
+
+.card.elementary a {
+  color: #ff9800; /* Orange for Elementary card */
+}
+
+.card.elementary a:hover {
+  color: #e68a00; /* Darker orange on hover */
+}
+
+.card.middle a {
+  color: #8a2be2; /* Purple for Middle card */
+}
+
+.card.middle a:hover {
+  color: #5b0e8a; /* Darker purple on hover */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.card img {
+  max-width: 100px; /* Consistent image size */
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.5rem; /* Larger, bold headings */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+/* Card Paragraph Styling */
+.card p {
+  color: #808080; /* Lighter gray to match the design */
+  font-size: 0.8rem; /* Slightly smaller font for clean spacing */
+  line-height: 1.5; /* More generous line spacing for a clean look */
+  font-family: "Poppins", sans-serif; /* Modern and elegant font */
+  text-align: center; /* Center-aligned for uniformity */
+  margin: 0; /* No margin above or below */
+  padding: 0; /* No extra padding */
+}
+
+.card a {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff; /* Blue link */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.arrow-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.arrow-buttons button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ff9800; /* Bright orange buttons */
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.arrow-buttons button:hover {
+  background-color: #e68a00; /* Darker orange on hover */
+  transform: scale(1.1); /* Slight enlargement */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    max-width: 90%; /* Full-width cards on smaller devices */
+  }
+
+  .arrow-buttons {
+    margin-top: 1.5rem;
+  }
+}
+/* Stories Section */
+.stories {
+  background: linear-gradient(
+    to bottom,
+    #fff8e1,
+    #fce4ec
+  ); /* Gradient background */
+  padding: 4rem 2rem;
+  color: #333;
+}
+
+.stories h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Right partition first */
+  gap: 2rem;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for left partition */
+  gap: 1.5rem;
+}
+
+.right .story-card.large {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right .story-card.large img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.right .story-card.large .date {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: #00bcd4; /* Blue for large card */
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 30px;
+  font-weight: bold;
+  z-index: 10;
+  /* General Styling for Date Badge */
+  .right.story-card .date {
+    position: absolute;
+    bottom: -1rem; /* Slightly below the image */
+    left: 1rem; /* Positioned slightly inside from the left */
+    background: #00bcd4; /* Default color */
+    color: #fff;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 30px; /* Pill shape */
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 10; /* Ensures it stays above the content */
+  }
+
+  /* Specific Colors for Each Card */
+  .left .story-card:nth-child(1) .date {
+    background: #27ae60; /* Green */
+  }
+
+  .left .story-card:nth-child(2) .date {
+    background: #9b59b6; /* Purple */
+  }
+
+  .left .story-card:nth-child(3) .date {
+    background: #f39c12; /* Orange */
+  }
+
+  .left .story-card:nth-child(4) .date {
+    background: #8e44ad; /* Violet */
+  }
+
+  .right .story-card.large .date {
+    background: #00bcd4; /* Blue for the large card */
+  }
+
+  /* Story Card Styling */
+  .story-card {
+    position: relative; /* Ensures the .date is positioned relative to the card */
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0; /* No padding for precise alignment */
+  }
+
+  .story-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .story-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #333;
+    text-align: left;
+  }
+
+  .story-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 1rem 1.5rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  /* Hover Effect */
+  .story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Fix for Visibility Issue on Right Cards */
+.story-card img {
+  position: relative; /* Ensure the date badge aligns with the image */
+  display: block;
+}
+.right .story-card .date {
+  position: right;
+  bottom: 1rem;
+  left: 1rem;
+  background: blue; /* Green for small cards */
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 30px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.story-card {
+  position: relative; /* Ensures the .date is positioned relative to the card */
+}
+.right .story-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left .story-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.left .story-card .date {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: #27ae60; /* Green for small cards */
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 30px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.left .story-card h3 {
+  font-size: 1.2rem;
+  margin: 1rem;
+  color: #333;
+  text-align: left;
+}
+
+.left .story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background: #333;
+}
+/* Orange Background for Stories */
+.orange-background {
+  background: linear-gradient(
+    to bottom,
+    #fff8e1,
+    #ffcc80
+  ); /* Light orange gradient */
+  padding: 4rem 2rem; /* Spacing around the section */
+  color: #333; /* Text color for contrast */
+}
+
+.stories h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #000; /* Black button */
+  color: #fff;
+  border-radius: 8px; /* Rounded edges */
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background: #333; /* Slightly lighter black on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .story-grid {
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
+
+  .left {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Two columns for small cards on mobile */
+    gap: 1rem;
+  }
+
+  .right .story-card.large {
+    grid-column: span 2; /* Large card spans two columns on mobile */
+  }
+
+  .right .story-card.large img {
+    height: auto; /* Adjust image size */
+  }
+}
+
+/* Footer */
+.footer {
+  background: #007bff; /* Bright blue background */
+  color: #fff; /* White text */
+  display: flex;
+  justify-content: space-between; /* Space between sections */
+  padding: 3rem 2rem; /* Padding for spacing */
+  flex-wrap: wrap; /* Wrap sections on smaller screens */
+}
+
+/* Footer Logo Section */
+.footer-logo {
+  display: flex;
+  /* flex-direction: column; Stack logo and text */
+  align-items: left; /* Center-align items */
+  text-align: left;
+  gap: 0px; /* Space between elements */
+  color: #fff; /* White text for contrast */
+  /* flex: 1; Take equal width */
+}
+
+.footer-logo img {
+  width: 60px; /* Adjust logo size */
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-text h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem; /* Larger font for title */
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.footer-logo-text h2 span:first-child {
+  display: block; /* "Kids" on its own line */
+}
+
+.footer-logo-text h2 span:last-child {
+  display: block; /* "Education" on its own line */
+}
+
+.footer-logo-text p {
+  font-size: 0.9rem; /* Smaller font for paragraph */
+  line-height: 1.2; /* Better readability */
+  color: #d1d1d1; /* Light gray color for contrast */
+  max-width: 280px; /* Restrict paragraph width */
+}
+
+/* Footer Links Section */
+.footer-links {
+  flex: 1; /* Take equal width */
+  text-align: left;
+}
+
+.footer-links h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem; /* Add spacing between links */
+}
+
+.footer-links ul li a {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-size: 0.95rem;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Footer Social Section */
+.footer-social {
+  flex: 1; /* Take equal width */
+  text-align: left;
+}
+
+.footer-social h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-social .social-icons a img {
+  width: 30px; /* Icon size */
+  margin-right: 10px; /* Space between icons */
+  transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons a img:hover {
+  transform: scale(1.2); /* Enlarge slightly on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align content */
+  }
+
+  .footer-logo,
+  .footer-links,
+  .footer-social {
+    text-align: center; /* Center-align for all sections */
+    max-width: 100%; /* Full width for smaller screens */
+    margin-bottom: 2rem; /* Space between sections */
+  }
+
+  .footer-social .social-icons {
+    justify-content: center; /* Center-align icons */
+  }
+}
