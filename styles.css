@@ -483,7 +483,9 @@ body {
 }
 
 .right .story-card.large .date {
-  position: absolute;
+  position: center;
+  width: 30%;
+  height: 40%;
   bottom: 1rem;
   left: 1rem;
   background: #00bcd4; /* Blue for large card */
@@ -493,20 +495,8 @@ body {
   border-radius: 30px;
   font-weight: bold;
   z-index: 10;
+}
   /* General Styling for Date Badge */
-  .right.story-card .date {
-    position: absolute;
-    bottom: -1rem; /* Slightly below the image */
-    left: 1rem; /* Positioned slightly inside from the left */
-    background: #00bcd4; /* Default color */
-    color: #fff;
-    padding: 0.4rem 1rem;
-    font-size: 0.85rem;
-    border-radius: 30px; /* Pill shape */
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    z-index: 10; /* Ensures it stays above the content */
-  }
 
   /* Specific Colors for Each Card */
   .left .story-card:nth-child(1) .date {
@@ -530,7 +520,7 @@ body {
   }
 
   /* Story Card Styling */
-  .story-card {
+  .left .story-card {
     position: relative; /* Ensures the .date is positioned relative to the card */
     background: #fff;
     border-radius: 15px;
@@ -559,7 +549,7 @@ body {
     font-size: 0.9rem;
     color: #555;
     margin: 0 1rem 1.5rem;
-    line-height: 1.6;
+    line-height: 1.3;
     text-align: left;
   }
 
@@ -573,25 +563,20 @@ body {
 /* Fix for Visibility Issue on Right Cards */
 .story-card img {
   position: relative; /* Ensure the date badge aligns with the image */
-  display: block;
-}
-.right .story-card .date {
-  position: right;
-  bottom: 1rem;
-  left: 1rem;
-  background: blue; /* Green for small cards */
-  color: #fff;
-  padding: 0.4rem 1rem;
-  font-size: 0.85rem;
-  border-radius: 30px;
-  font-weight: bold;
-  z-index: 10;
+  /* display: block; */
 }
 
 .story-card {
   position: relative; /* Ensures the .date is positioned relative to the card */
 }
 .right .story-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.left .story-card {
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -608,14 +593,16 @@ body {
 }
 
 .left .story-card .date {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
+  position: center;
+  width: 60%;
+  bottom: 0.7rem;
+  left: 0.7rem;
+  right: 0.7rem;
   background: #27ae60; /* Green for small cards */
   color: #fff;
-  padding: 0.4rem 1rem;
-  font-size: 0.85rem;
-  border-radius: 30px;
+  padding: 0.2rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 20px;
   font-weight: bold;
   z-index: 10;
 }
@@ -630,6 +617,7 @@ body {
 .left .story-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 .view-all-container {
